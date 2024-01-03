@@ -1,0 +1,4 @@
+# Packages #
+############
+#it is always to ignore placing EXE packages in the repository
+*.exe
