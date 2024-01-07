@@ -1,0 +1,6 @@
+[submodule "integrate-python"]
+	path = integrate-python
+	url = https://github.com/jaspreet321/integrate-python.git
+[submodule "learning_terraform"]
+	path = learning_terraform
+	url = https://github.com/jaspreet321/learning_terraform.git
