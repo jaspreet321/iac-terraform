@@ -1,0 +1,77 @@
+name: Testing workflow/pipeline with some python-upgrades & basic shell
+
+on:
+  workflow_dispatch:
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  VERSION: 5
+  VERSION2: 7
+
+jobs:
+  check_envariables:                                  #STAGE1
+    runs-on: ubuntu-latest
+    steps:
+    - name: check all the env variables
+      run: |
+        printenv
+        
+  directory:                                           #STAGE2
+    needs: check_envariables
+    runs-on: ubuntu-latest
+    steps:
+    - name: verify the directory
+      run: |
+        ls -lsart
+
+  build:                                              #STAGE3
+    needs: directory
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.11, 3.10]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Check python version
+      run: |
+        python --version
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+    - name: run any python code
+      run: |
+        ls -ltr
+        echo "running datatype_casting"
+        python datatype_casting.py >> artifact.txt
+    - name: Uploading artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: code-coverage-report
+        path: artifact.txt
+        expire_in: never
+        
+  download_artifact:                                #STAGE4
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Downloading artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: code-coverage-report
+        path: artifact.txt
+        expire_in: never
+        
+  compare_versions:                                #STAGE5
+    needs: check_envariables
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: compare both the versions mentioned as envrionmental variables above
+      run: |
+        chmod +x versioncompare.sh
+        ./versioncompare.sh

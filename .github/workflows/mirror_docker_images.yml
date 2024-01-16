@@ -1,0 +1,17 @@
+name: mirroring the docker image testing
+
+on:
+  workflow_dispatch:
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  run_docker_mirror_script:                                  #STAGE1
+    runs-on: ubuntu-latest
+    steps:
+    - name: run_docker_mirror_script
+      run: |
+        python docker-mirror.py
