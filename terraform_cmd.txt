@@ -10,6 +10,10 @@ terraform destroy
 
 terraform state list -  it'll show the configuration that terraform knows for your code
 
-terraform graph
 
 terraform state (powerful command)
+
+
+terraform state pull
+
+terraform plan -destroy
