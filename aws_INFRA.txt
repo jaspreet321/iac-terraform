@@ -1,0 +1,9 @@
+aws resources sequence when creating through terraform -
+
+1. vpc main connection
+
+2. ec2 (ofcourse ebs will also be created by default)
+
+3. s3 bucket
+
+4. load balancer elb 

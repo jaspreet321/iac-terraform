@@ -1,0 +1,33 @@
+Amazon EC2 (Elastic Compute Cloud):
+
+EC2 provides scalable virtual servers in the cloud. You can choose instances based on your application's compute, memory, and storage requirements.
+Amazon S3 (Simple Storage Service):
+
+S3 is an object storage service that allows you to store and retrieve any amount of data. It is widely used for static website hosting, backup and restore, and data archiving.
+Amazon RDS (Relational Database Service):
+
+RDS simplifies the setup, operation, and scaling of a relational database. You can choose database engines like MySQL, PostgreSQL, Oracle, or SQL Server.
+Amazon VPC (Virtual Private Cloud):
+
+VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+Amazon Route 53:
+
+Route 53 is a scalable domain name system (DNS) web service designed to route end-user requests to globally distributed endpoints.
+Amazon IAM (Identity and Access Management):
+
+IAM enables you to securely control access to AWS services and resources. It is crucial for managing user permissions and ensuring security best practices.
+Amazon CloudWatch:
+
+CloudWatch provides monitoring for AWS resources and applications in real-time. It allows you to collect and track metrics, collect and monitor log files, and set alarms.
+Amazon CloudFront:
+
+CloudFront is a content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally.
+AWS Lambda:
+
+Lambda lets you run code without provisioning or managing servers. It is useful for building serverless applications.
+Amazon Elastic Load Balancing (ELB):
+
+ELB automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses.
+Amazon EBS (Elastic Block Store):
+
+EBS provides persistent block-level storage volumes for use with EC2 instances. It is commonly used for databases and applications that require high-performance storage.
