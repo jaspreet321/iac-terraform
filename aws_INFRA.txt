@@ -1,9 +1,10 @@
 aws resources sequence when creating through terraform -
 
-1. vpc main connection
+1. vpc main connection (ofcourse cidr will also be mentioned)
 
-2. ec2 (ofcourse ebs will also be created by default)
+2. Subnet/subnets's under above created vpc
 
-3. s3 bucket
+3. ec2 (ofcourse ebs will also be created by default)
 
-4. load balancer elb 
+4. s3 bucket
+

@@ -2,6 +2,7 @@
 
 #The tags attribute is set to a map (key-value pairs), where the key is "Name" and the value is "main". This means that the VPC being created will have a tag with the key "Name" and the value "main". This tag can be useful for identifying the purpose or owner of the VPC.
 
+#If there's vpc, cidr will be there..
 
 
 resource "aws_vpc" "main" {
