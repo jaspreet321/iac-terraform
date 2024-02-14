@@ -6,7 +6,7 @@
 resource "aws_instance" "server1" {
   ami           = "ami-062a49a8152e4c031"
   instance_type = "t2.micro"
-  subnet_id     = "subnet-00db483df53807737"  # Specify the subnet ID within your VPC
+  subnet_id     = "subnet-053c4461dddeb99e4"  # Specify the subnet ID within your VPC
 
   tags = {
     Name = "terraform first server"
@@ -16,7 +16,7 @@ resource "aws_instance" "server1" {
 resource "aws_instance" "server2" {
   ami           = "ami-062a49a8152e4c031"
   instance_type = "t2.micro"
-  subnet_id     = "subnet-00db483df53807737"
+  subnet_id     = "subnet-053c4461dddeb99e4"
 
   tags = {
     Name = "terraform second server"

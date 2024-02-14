@@ -4,7 +4,9 @@ aws resources sequence when creating through terraform -
 
 2. Subnet/subnets's under above created vpc
 
-3. ec2 (ofcourse ebs will also be created by default)
+3. ec2 under above subnet's (ofcourse ebs will also be created by default)
 
 4. s3 bucket
+
+5. route53 + hostedzone under above vpc (ofcourse hostedzone is mandat to hold the application dns)
 
